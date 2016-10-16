@@ -229,7 +229,7 @@ confusionMatrix(res,data$classe)</code></pre>
 ## Detection Rate         0.2802   0.1761   0.1634   0.1524   0.1741
 ## Detection Prevalence   0.2936   0.1892   0.1841   0.1577   0.1753
 ## Balanced Accuracy      0.9833   0.9468   0.9559   0.9617   0.9728</code></pre>
-<p>The random forest model shows a high accuracy of almost 95%, so I do not investigate further methods or a higher number of trees. I train the final model on the full data set.</p>
+<p>The random forest model shows a high accuracy of almost 95%, corresponding to a predicted out-of-sample error of ca. 5%, so I do not investigate further methods or a higher number of trees. I train the final model on the full data set.</p>
 <pre class="r"><code>set.seed(123)
 final.mod &lt;- randomForest(classe ~ .,data=data,ntree=100)</code></pre>
 <p>I am curious what variables are the most predictive, and look at their relative importance. However, no clear picture emerges.</p>
